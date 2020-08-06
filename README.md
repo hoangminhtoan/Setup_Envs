@@ -1,9 +1,21 @@
 ## Setup Working Environments
  * [Ubuntu](#ubuntu)
  * [Jetson Nano](#jetson-nano)
+ * [Create Python Virtual Env](*create-python-virtual-env)
 
 
-
+### Create Python Virtual Env
+ Add the following code at the beginning of bash shell script
+ ```
+ env_name="<your env name>"
+ echo "Create virtual environment"
+ source `which virtualenvwrapper.sh`
+ mkvirtualenv $env_name -p python3
+ source $HOME/.virtualenvs/$env_name/bin/activate
+ workon $env_name
+ ```
+ then run ```source <$your_file>.sh```
+ 
 ### Ubuntu
  * **OS info**
    ``` bash
