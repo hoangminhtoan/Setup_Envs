@@ -20,6 +20,7 @@
    | Miniconda-3      | Python >= 3.7    |
 
  * **Pip vs Conda**
+ 
    **1. Pip**
 
    **2. Conda**
