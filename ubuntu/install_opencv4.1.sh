@@ -1,3 +1,10 @@
+if [ "$#" -ne 2 ]; then
+    echo "Usage: $0 <Install Folder> <Virtual Env>"
+    exit
+fi
+folder="$1"
+env_name="$2"
+
 echo "************* Installing OpenCV 4.1.0 *************"
 
 sudo apt-get update -y # Update the list of packages
@@ -56,15 +63,12 @@ echo "source /usr/local/bin/virtualenvwrapper.sh" >> ~/.bashrc
 source ~/.bashrc
 
 echo "************* Create Python3 Virutal Environment *************"
-mkvirtualenv py3 -p python3
+source `which virtualenvwrapper.sh`
+mkvirtualenv $env_name -p python3
+source $HOME/.virtualenvs/$env_name/bin/activate
+workon $env_name
 
 echo "************* Installing OpenCV 4.1.0 *************"
-if [ "$#" -ne 1 ]; then
-    echo "Usage: $0 <Install Folder>"
-    exit
-fi
-folder="$1"
-
 echo "************* Download OpenCV from Github *************"
 cd $folder
 git clone https://github.com/opencv/opencv.git

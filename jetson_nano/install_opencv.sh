@@ -1,29 +1,17 @@
 # run from terminal
 # bash install_opencv4.3.sh <destination folder>
 
-if [ "$#" -ne 1 ]; then
-    echo "Usage: $0 <Install Folder>"
+if [ "$#" -ne 2 ]; then
+    echo "Usage: $0 <Install Folder> <Virtual Env>"
     exit
 fi
 folder="$1"
+env_name="$2"
 
 # put your username & password here
 #user=""
 #passwd=""
 
-echo "Install Python "
-sudo apt-get install -y build-essential checkinstall cmake pkg-config yasm
-sudo apt-get install -y git gfortran
-sudo apt-get install -y python-dev python-pip python3-dev python3-pip
-sudo -H pip2 install -U pip numpy
-sudo -H pip3 install -U pip numpy
-sudo pip2 install virtualenv virtualenvwrapper
-sudo pip3 install virtualenv virtualenvwrapper
-echo "# Virtual Environment Wrapper"  >> ~/.bashrc
-echo "source /usr/local/bin/virtualenvwrapper.sh" >> ~/.bashrc
-source ~/.bashrc
-
-mkvirtualenv py3 -p python3
 
 echo " Remove other OpenCV first"
 sudo apt-get purge *libopencv*

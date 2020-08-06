@@ -56,9 +56,27 @@ sudo add-apt-repository ppa:graphics-drivers/ppa
 sudo apt-get install g++ freeglut3-dev build-essential libx11-dev libxmu-dev libxi-dev libglu1-mesa libglu1-mesa-dev
 
 # Step 3.5. Download installation packages
-#wget https://developer.nvidia.com/compute/cuda/9.0/Prod/local_installers/cuda_9.0.176_384.81_linux-run
+cd $folder
+echo "********** Dowloading CUDA 9 **********"
+wget https://developer.nvidia.com/compute/cuda/9.0/Prod/local_installers/cuda_9.0.176_384.81_linux-run
+wget https://developer.nvidia.com/compute/cuda/9.0/Prod/patches/1/cuda_9.0.176.1_linux-run
+wget https://developer.nvidia.com/compute/cuda/9.0/Prod/patches/2/cuda_9.0.176.2_linux-run
+wget https://developer.nvidia.com/compute/cuda/9.0/Prod/patches/3/cuda_9.0.176.3_linux-run
+wget https://developer.nvidia.com/compute/cuda/9.0/Prod/patches/4/cuda_9.0.176.4_linux-run
 
-# Step 3.6. Install
-# cd directory which contained downloaded cuda file
-# install cuda follow the prompts
-# !! Important: Do not install Cuda accelerate driver
+sudo chmod a+x *.run
+./cuda_9.0.176_384.81_linux.run
+./cuda_9.0.176.1_linux.run
+./cuda_9.0.176.2_linux.run
+./cuda_9.0.176.3_linux.run
+./cuda_9.0.176.4_linux.run
+
+echo "********** Download Cuda Toolkit **********"
+wget https://developer.nvidia.com/compute/machine-learning/cudnn/secure/7.6.4.38/Production/9.0_20190923/cudnn-9.0-linux-x64-v7.6.4.38.tgz
+tar -xzvf
+cd cudnn-9.0-linux-x64-v7.6.4.38/cuda
+sudo mv lib64/* /usr/local/cuda-9.0/lib64/
+sudo mv include/* /usr/local/cuda-9.0/include/
+
+echo "********** Installation Complete **********"
+echo "Reopen this terminal and check nvcc --version"
