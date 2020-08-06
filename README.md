@@ -12,7 +12,9 @@
    Default Python3: 3.6.9
    ```
   * Package requirements
-  | Package          | Support      |
+
+  | Package          | Support          |
+  |------------------|------------------|
   | Tensorflow-GPU 2 | Cuda-Toolkit 10.1|
   |                  | Python < 3.8     |
   | Miniconda-3      | Python >= 3.7    |
