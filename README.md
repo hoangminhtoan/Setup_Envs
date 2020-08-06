@@ -13,14 +13,22 @@
    ```
  * **Package requirements**
 
-   | Package          | Support          |
-   |------------------|------------------|
-   | Tensorflow-GPU 2 | Cuda-Toolkit 10.1|
-   |                  | Python < 3.8     |
-   | Miniconda-3      | Python >= 3.7    |
+   | Packages         | Support            |
+   |------------------|--------------------|
+   | Tensorflow-GPU 2 | Cuda-Toolkit 10.1  |
+   |                  | Python < 3.8       |
+   | Miniconda-3      | Python >= 3.7      |
+   |------------------|--------------------|
+   |PyTorch v1.0      | torchvision v0.2.2 |
+   |PyTorch v1.1      | torchvision v0.3.0 |
+   |PyTorch v1.2      | torchvision v0.4.0 |
+   |PyTorch v1.3      | torchvision v0.4.2 |
+   |PyTorch v1.4      | torchvision v0.5.0 |
+   |PyTorch v1.5      | torchvision v0.6.0 |
+   |PyTorch v1.6      | torchvision v0.7.0 |
 
  * **Pip vs Conda**
- 
+
    **1. Pip**
 
    **2. Conda**
@@ -68,17 +76,15 @@
  * Install PyTorch
    Select the version of torchvision to download depending on the version of PyTorch that you have installed:
 
-   | Pytorch     | torchvision       |
-   |-------------|-------------------| 
-   |PyTorch v1.0 | torchvision v0.2.2|
-   |PyTorch v1.1 | torchvision v0.3.0|
-   |PyTorch v1.2 | torchvision v0.4.0|
-   |PyTorch v1.3 | torchvision v0.4.2|
-   |PyTorch v1.4 | torchvision v0.5.0|
-   |PyTorch v1.5 | torchvision v0.6.0|
-   |PyTorch v1.6 | torchvision v0.7.0|
+   ```
+   under the 'vision' directory
+   python -c "import torchvision" produced import err.
+   However, uder the other directory, it doesn't
+   ```
+   
 
 ### References
  * [Installing OpenCV 4.1 on Ubuntu](https://cv-tricks.com/installation/opencv-4-1-ubuntu18-04/)
+ * [Install Tensorflow-GPU on Ubuntu](https://www.tensorflow.org/install/source#tested_build_configurations)
  * [Installing Pytorch on JetsonNano](https://forums.developer.nvidia.com/t/pytorch-for-jetson-nano-version-1-6-0-now-available/72048)
  * [Installing Tensorflow on JetsonNano](https://docs.nvidia.com/deeplearning/frameworks/install-tf-jetson-platform-release-notes/tf-jetson-rel.html#tf-jetson-rel)
