@@ -11,7 +11,7 @@ folder="$1"
 #user=""
 #passwd=""
 
-echo "********** Install Python **********"
+echo "Install Python "
 sudo apt-get install -y build-essential checkinstall cmake pkg-config yasm
 sudo apt-get install -y git gfortran
 sudo apt-get install -y python-dev python-pip python3-dev python3-pip
@@ -25,12 +25,12 @@ source ~/.bashrc
 
 mkvirtualenv py3 -p python3
 
-echo "** Remove other OpenCV first"
+echo " Remove other OpenCV first"
 sudo apt-get purge *libopencv*
 sudo apt autoremove
 
 
-echo "** Install requirement"
+echo " Install requirement packages"
 sudo apt-get update
 sudo apt-get install -y build-essential cmake git libgtk2.0-dev pkg-config libavcodec-dev libavformat-dev libswscale-dev
 sudo apt-get install -y libgstreamer1.0-dev libgstreamer-plugins-base1.0-dev
@@ -42,7 +42,7 @@ sudo apt-get install -y curl
 sudo apt-get update
 
 
-echo "** Download opencv-4.3.0"
+echo "** Download opencv-4.3.0 to" $folder
 cd $folder
 curl -L https://github.com/opencv/opencv/archive/4.3.0.zip -o opencv-4.3.0.zip
 curl -L https://github.com/opencv/opencv_contrib/archive/4.3.0.zip -o opencv_contrib-4.3.0.zip
@@ -51,12 +51,12 @@ unzip opencv_contrib-4.3.0.zip
 cd opencv-4.3.0/
 
 
-echo "** Apply patch"
+echo " Apply patch"
 sed -i 's/include <Eigen\/Core>/include <eigen3\/Eigen\/Core>/g' modules/core/include/opencv2/core/private.hpp
 sed -i 's/{CUDNN_INCLUDE_DIR}\/cudnn.h/{CUDNN_INCLUDE_DIR}\/cudnn_version.h/g' cmake/FindCUDNN.cmake
 
 
-echo "** Building..."
+echo " Building OpenCV ..."
 mkdir build
 cd build/
 cmake -D CMAKE_BUILD_TYPE=RELEASE \

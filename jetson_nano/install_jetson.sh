@@ -11,4 +11,5 @@ sudo bash -c 'echo "/var/swapfile swap swap defaults 0 0" >> /etc/fstab'
 sudo apt-get update
 sudo apt-get upgrade
 
+echo "********** Reboot to take effect **********"
 sudo reboot
