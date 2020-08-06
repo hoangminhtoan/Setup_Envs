@@ -67,13 +67,15 @@
  * Install PyTorch
    Select the version of torchvision to download depending on the version of PyTorch that you have installed:
 
-   PyTorch v1.0 - torchvision v0.2.2
-   PyTorch v1.1 - torchvision v0.3.0
-   PyTorch v1.2 - torchvision v0.4.0
-   PyTorch v1.3 - torchvision v0.4.2
-   PyTorch v1.4 - torchvision v0.5.0
-   PyTorch v1.5 - torchvision v0.6.0
-   PyTorch v1.6 - torchvision v0.7.0
+   | Pytorch     | torchvision       |
+   |-------------|-------------------| 
+   |PyTorch v1.0 | torchvision v0.2.2|
+   |PyTorch v1.1 | torchvision v0.3.0|
+   |PyTorch v1.2 | torchvision v0.4.0|
+   |PyTorch v1.3 | torchvision v0.4.2|
+   |PyTorch v1.4 | torchvision v0.5.0|
+   |PyTorch v1.5 | torchvision v0.6.0|
+   |PyTorch v1.6 | torchvision v0.7.0|
 
 ### References
  * [Installing OpenCV 4.1 on Ubuntu](https://cv-tricks.com/installation/opencv-4-1-ubuntu18-04/)
