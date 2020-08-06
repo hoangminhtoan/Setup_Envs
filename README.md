@@ -6,53 +6,53 @@
 
 ### Ubuntu
  * OS info:
-   ```
+   ``` bash
    Version: 18.04
    Default Python2: 2.7
    Default Python3: 3.6.9
    ```
-  * Package requirements
+ * Package requirements
 
-  | Package          | Support          |
-  |------------------|------------------|
-  | Tensorflow-GPU 2 | Cuda-Toolkit 10.1|
-  |                  | Python < 3.8     |
-  | Miniconda-3      | Python >= 3.7    |
+   | Package          | Support          |
+   |------------------|------------------|
+   | Tensorflow-GPU 2 | Cuda-Toolkit 10.1|
+   |                  | Python < 3.8     |
+   | Miniconda-3      | Python >= 3.7    |
 
-  * Pip vs Conda
+ * Pip vs Conda
    1. Pip
 
    2. Conda
+     
+     Require python >= 3.7
 
-    Require python >= 3.7
+     2.1. Install Python & switch python version
+      ```
+      sudo add-apt-repository ppa:deadsnakes/ppa
+      sudo apt update
+      sudo apt install python<$version>
+      ```
+     2.2. Swith python version by using **update-alternatives**
+      ```
+      sudo update-alternatives --install /usr/bin/python python /usr/bin/python<version>  <priority order>
+      ```
 
-    2.1. Install Python & switch python version
-    ```
-    sudo add-apt-repository ppa:deadsnakes/ppa
-    sudo apt update
-    sudo apt install python<$version>
-    ```
-    2.2. Swith python version by using **update-alternatives**
-    ```
-    sudo update-alternatives --install /usr/bin/python python /usr/bin/python<version> <priority order>
-    ```
+      For example, if you installed 5 python versions: 2.7, 3.5, 3.6, 3.7, and 3.8
 
-    For example, if you installed 5 python versions: 2.7, 3.5, 3.6, 3.7, and 3.8
+      ```
+      sudo update-alternatives --install /usr/bin/python python /usr/bin/python2.7 1
+      sudo update-alternatives --install /usr/bin/python python /usr/bin/python3.5 2
+      sudo update-alternatives --install /usr/bin/python python /usr/bin/python3.6 3
+      sudo update-alternatives --install /usr/bin/python python /usr/bin/python3.7 4
+      sudo update-alternatives --install /usr/bin/python python /usr/bin/python3.8 5
+     ```
+     then select python version you want to use
+     ```
+     sudo update-alternatives --config python
+     ```
 
-    ```
-    sudo update-alternatives --install /usr/bin/python python /usr/bin/python2.7 1
-    sudo update-alternatives --install /usr/bin/python python /usr/bin/python3.5 2
-    sudo update-alternatives --install /usr/bin/python python /usr/bin/python3.6 3
-    sudo update-alternatives --install /usr/bin/python python /usr/bin/python3.7 4
-    sudo update-alternatives --install /usr/bin/python python /usr/bin/python3.8 5
-   ```
-   then select python version you want to use
-   ```
-   sudo update-alternatives --config python
-   ```
-
-   2.3 Install Miniconda-3
-    Follow instruction from offical webpage
+     2.3 Install Miniconda-3
+      Follow instruction from offical webpage
 
 ### Jetson Nano
  * OS info:
