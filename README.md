@@ -5,13 +5,13 @@
 
 
 ### Ubuntu
- * OS info:
+ * **OS info**
    ``` bash
    Version: 18.04
    Default Python2: 2.7
    Default Python3: 3.6.9
    ```
- * Package requirements
+ * **Package requirements**
 
    | Package          | Support          |
    |------------------|------------------|
@@ -19,20 +19,20 @@
    |                  | Python < 3.8     |
    | Miniconda-3      | Python >= 3.7    |
 
- * Pip vs Conda
-   1. Pip
+ * **Pip vs Conda**
+   **1. Pip**
 
-   2. Conda
+   **2. Conda**
      
      Require python >= 3.7
 
-     2.1. Install Python & switch python version
+     **2.1. Install Python & switch python version**
       ```
       sudo add-apt-repository ppa:deadsnakes/ppa
       sudo apt update
       sudo apt install python<$version>
       ```
-     2.2. Swith python version by using **update-alternatives**
+     **2.2. Swith python version by using <i>update-alternatives</i>**
       ```
       sudo update-alternatives --install /usr/bin/python python /usr/bin/python<version>  <priority order>
       ```
@@ -51,16 +51,31 @@
      sudo update-alternatives --config python
      ```
 
-     2.3 Install Miniconda-3
+     **2.3 Install Miniconda-3**
       Follow instruction from offical webpage
 
 ### Jetson Nano
- * OS info:
+ * **OS info**
    ```
    Jetpack Version 4.3
    ```
 
+   Jetson Nano use 4GB for swap file => you may need to increase swap file in order to run programms faster.
+
+   run ```1.install_jetson.sh``` to increase swap memory
+
+ * Install PyTorch
+   Select the version of torchvision to download depending on the version of PyTorch that you have installed:
+
+   PyTorch v1.0 - torchvision v0.2.2
+   PyTorch v1.1 - torchvision v0.3.0
+   PyTorch v1.2 - torchvision v0.4.0
+   PyTorch v1.3 - torchvision v0.4.2
+   PyTorch v1.4 - torchvision v0.5.0
+   PyTorch v1.5 - torchvision v0.6.0
+   PyTorch v1.6 - torchvision v0.7.0
 
 ### References
  * [Installing OpenCV 4.1 on Ubuntu](https://cv-tricks.com/installation/opencv-4-1-ubuntu18-04/)
- * 
+ * [Installing Pytorch on JetsonNano](https://forums.developer.nvidia.com/t/pytorch-for-jetson-nano-version-1-6-0-now-available/72048)
+ * [Installing Tensorflow on JetsonNano](https://docs.nvidia.com/deeplearning/frameworks/install-tf-jetson-platform-release-notes/tf-jetson-rel.html#tf-jetson-rel)
