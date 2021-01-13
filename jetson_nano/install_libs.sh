@@ -39,7 +39,7 @@ pip install numpy torch-1.1.0-cp36-cp36m-linux_aarch64.whl
 
 echo "********* Installing TorchVision ***********"
 sudo apt-get install libjpeg-dev zlib1g-dev
-git clone --branch v0.3.0 https://github.com/pytorch/vision torchvision   # see below for version of torchvision to download
+git clone --branch v0.8.1 https://github.com/pytorch/vision torchvision   # see below for version of torchvision to download
 cd torchvision
 python setup.py install
 cd ../  # attempting to load torchvision from build dir will result in import error
