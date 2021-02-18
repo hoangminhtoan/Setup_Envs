@@ -5,7 +5,7 @@ fi
 
 LOCATION=$1
 
-cd "/media/toanhoang/Workspace/Setup/Ubuntu/VPN/"
+cd "/Libs/VPN/"
 
 if [[ "$LOCATION" == "jp" ]]; then
  echo "Welcome to Japan!"
