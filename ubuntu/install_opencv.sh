@@ -36,6 +36,7 @@ cmake -D CMAKE_BUILD_TYPE=RELEASE \
       -D WITH_GTK=ON \
       -D CUDA_TOOLKIT_ROOT_DIR=/usr/local/cuda \
       -D CUDA_ARCH_BIN='3.0 3.5 5.0 6.0 6.2 7.0 7.5' \
+      -D BUILD_opencv_cudacodec=OFF \
       -D OPENCV_EXTRA_MODULES_PATH=../../opencv_contrib/modules \
       -D BUILD_EXAMPLES=ON \
       -D OPENCV_ENABLE_NONFREE=ON \
