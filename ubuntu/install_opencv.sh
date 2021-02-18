@@ -1,4 +1,5 @@
 echo "************* Installing OpenCV 4.1.0 *************"
+cd Libs
 
 echo "********** Dowloading Packages **********"
 # Download OpenCV from Github
@@ -40,7 +41,7 @@ cmake -D CMAKE_BUILD_TYPE=RELEASE \
       -D OPENCV_ENABLE_NONFREE=ON \
       -D OPENCV_GENERATE_PKGCONFIG=YES ..
 
-cmake --build . --parallel 12
+#cmake --build . --parallel 12
 make -j$(nproc)
 sudo make install
 sudo sh -c 'echo "/usr/local/lib" >> /etc/ld.so.conf.d/opencv.conf'
