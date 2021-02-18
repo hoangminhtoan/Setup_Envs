@@ -5,6 +5,7 @@ echo "********** Upgrade CMake **********"
 sudo apt remove --purge cmake
 hash -r
 sudo snap install cmake --classic
+sudo apt install clang
 
 echo "********** Install Desktop Sharing **********"
 sudo apt update
